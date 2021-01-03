@@ -9,8 +9,12 @@ public class main {
 //
 //        sieveOfEratosthenes.printList(sieveOfEratosthenes.computePrimes(30));
 //        TrialDivision.trialDivision(9);
-        ExtendedEuclidean ex = new ExtendedEuclidean();
-        int [] ans = ex.gcd(252,198);
-        System.out.println(ans.toString());
+//        ExtendedEuclidean ex = new ExtendedEuclidean();
+//        int [] ans = ex.extEuclidean(10,7);
+//        System.out.println(ans.toString());
+        chineseReminder ch = new chineseReminder();
+        int a[] = {3,1,6};
+        int m[] = {5,7,8};
+        System.out.println(ch.chinReminder(a,m));
     }
 }
