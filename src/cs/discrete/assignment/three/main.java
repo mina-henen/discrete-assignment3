@@ -8,5 +8,6 @@ public class main {
         SieveOfEratosthenes sieveOfEratosthenes = new SieveOfEratosthenes();
 
         sieveOfEratosthenes.printList(sieveOfEratosthenes.computePrimes(30));
+        TrialDivision.trialDivision(9);
     }
 }

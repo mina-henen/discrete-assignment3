@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SieveOfEratosthenes {
 
-    public List<Integer> computePrimes(int maxLimit) {
+    public static List<Integer> computePrimes(int maxLimit) {
         Boolean[] primesFlags = new Boolean[maxLimit + 1];
         List<Integer> primes = new ArrayList<>();
         for (int i = 0; i < primesFlags.length; i++) {
