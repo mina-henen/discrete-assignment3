@@ -1,33 +1,36 @@
 package cs.discrete.assignment.three;
 
-public class millerTest {
+public class MillerTest {
 
     static int power(int x, int y, int p) {
         /* calculate a^d %n */
-        int res = 1;
+
         x = x % p;
+        int res = 1;
         while (y > 0) {
             if ((y & 1) == 1)
                 res = (res * x) % p;
-            y = y >> 1;
+            y /=2;
             x = (x * x) % p;
         }
         return res;
     }
-    static boolean millersTest(int d, int n) {
+
+    /* m is an odd number such that d*2^r = n-1 for some r >= 1*/
+    static boolean millersTest(int m, int n) {
 
         /* pick a random number */
         int a = 2 + (int)(Math.random() % (n - 4));
 
-        /* calculate a^d %n */
-        int x = power(a, d, n);
+        /* calculate a^m %n */
+        int x = power(a, m, n);
         /* square x till reach n-1
         * if x^2 % n = 1 return false
         * if x^2 % n = n-1 return true */
         if (x == 1 || x == n - 1) {return true;}
-        while (d != n - 1) {
+        while (m != n - 1) {
             x = (x * x) % n;
-            d *= 2;
+            m *= 2;
             if (x == 1) {return false;}
             if (x == n - 1) {return true;}
         }
@@ -41,8 +44,8 @@ public class millerTest {
 
         if (n <= 1 || n == 4) { return false;}
         if (n <= 3){ return true;}
+        /* compute d */
         int d = n - 1;
-
         while (d % 2 == 0)
             d /= 2;
 
