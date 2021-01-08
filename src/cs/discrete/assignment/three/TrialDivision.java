@@ -8,6 +8,7 @@ public class TrialDivision {
         Boolean isComposite = false;
         //calculate primes using sieve of eratosthenes
         List<Integer> primes = SieveOfEratosthenes.computePrimes((int) Math.ceil(Math.sqrt(number)));
+
         for (int i = 2; i < primes.size(); i++) {
             //checking if the number is composite
             if (number % primes.get(i) == 0) {
@@ -15,6 +16,8 @@ public class TrialDivision {
                 isComposite = true;
             }
         }
+        //if the isComposite flag remains false after the loop
+        //then the number is a prime number
         if (!isComposite) {
             System.out.println("The entered number is Prime");
         }
