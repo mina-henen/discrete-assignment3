@@ -61,18 +61,9 @@ public class main {
                     return;
             }
         }
-//        TrialDivision.trialDivision(9);
-//        ExtendedEuclidean ex = new ExtendedEuclidean();
-//        int [] ans = ex.extEuclidean(10,7);
-//        System.out.println(ans.toString());
-//        chineseReminder ch = new chineseReminder();
-//        int a[] = {3,1,6};
-//        int m[] = {5,7,8};
-//        System.out.println(ch.chinReminder(a,m));
-//        millerTest m = new millerTest();
-//        System.out.println(m.isPrimeUseMillerTest(99,6));
     }
 
+    
     public static int[] read(int n) {
         int[] arr = new int[n];
         for (int i=0; i<n; ++i){
